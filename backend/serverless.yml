@@ -1,4 +1,4 @@
-org: nooreldeensalah
+org: massakone
 app: serverless-todo-app
 service: serverless-todo-app
 frameworkVersion: '2.21.1'
@@ -19,7 +19,7 @@ provider:
   lambdaHashingVersion: '20201221'
 
   stage: ${opt:stage, 'dev'}
-  region: ${opt:region, 'us-east-1'}
+  region: ${opt:region, 'us-east-2'}
 
   tracing:
     lambda: true
@@ -31,7 +31,7 @@ provider:
   environment:
     TODOS_TABLE: Todos-${self:provider.stage}
     TODOS_CREATED_AT_INDEX: CreatedAtIndex
-    ATTACHMENT_S3_BUCKET: nooreldeensalah451--serverless-c4-todo-images-${self:provider.stage}
+    ATTACHMENT_S3_BUCKET: massakone-serverless-todo-app-images-${self:provider.stage}
     SIGNED_URL_EXPIRATION: 300
 
   logs:
